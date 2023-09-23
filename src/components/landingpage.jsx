@@ -6,36 +6,36 @@ import arrow from "../assests/Vector 2 arrow.png";
 
 const Landingpage = () => {
   return (
-    <div className="h-screen flex justify-between">
-      <div className="h-screen w-1/2">
+    <div className="lg:h-screen flex flex-shrink-0 flex-wrap-reverse justify-between">
+      <div className="shrink-0">
         <img
           className="pt-10 pl-14 max-md:hidden"
           src={truck}
-          alt=""
-          srcset=""
+          alt="truck with french fries"
         />
-        <div className="pt-20">
-          <div className="pl-14 w-auto">
-            <div className="flex-col text-[#0E2368] font-bold text-6xl ">
-              <div className="p-0">Discover the </div>
-              <div className="p-0">
-                <span className="text-[#E23744]">Best</span> Food
+        <div className="pt-20 max-md:justify-center">
+          <div className="pl-14 flex flex-col w-auto justify-center lg:w-[26rem] max-md:w-[21rem]">
+            <div className="flex-col justify-center text-[#0E2368] font-bold lg:text-6xl max-md:text-3xl  ">
+              <div className="max-md:justify-center">
+                Discover the
+                <span className="text-[#E23744]"> Best</span> Food and Drinks
               </div>
-              <div className="p-0">and Drinks</div>
             </div>
-            <p className="pt-7">
-              <p>Naturally made Healthcare Products for the</p>
-              <p>better care & support of your body.</p>
+            <p className="pt-7 flex-col max-md:justify-center flex-wrap">
+              <p className="flex max-md:justify-center lg:text-lg">
+                Naturally made Healthcare Products for the better care & support
+                of your body.
+              </p>
             </p>
-            <button className="p-3 bg-[#E23744] rounded-3xl text-white mt-7">
+            <button className="p-3 w-fit bg-[#E23744] rounded-3xl text-white mt-7">
               Explore Now!
             </button>
           </div>
         </div>
       </div>
-      <div className="h-screen w-1/2">
+      <div className="h-screen max-md:w-screen flex justify-end">
         <img
-          className="absolute min-h-screen w-1/2"
+          className="absolute min-h-screen lg:w-1/2 w-full "
           src={vector}
           alt="red vector"
         />
@@ -47,7 +47,11 @@ const Landingpage = () => {
           src={arrow}
           alt="arrow"
         />
-        <img className="h-screen pt-3 pl-6" src={pizzaimg} alt="pizza" />
+        <img
+          className="max-md:h-screen pt-6 pr-10"
+          src={pizzaimg}
+          alt="pizza"
+        />
       </div>
     </div>
   );
