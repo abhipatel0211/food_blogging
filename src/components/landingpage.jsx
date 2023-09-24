@@ -15,7 +15,7 @@ const Landingpage = () => {
           loading="lazy"
         />
         <div className="pt-20 max-md:text-center">
-          <div className="px-14 flex flex-col w-auto justify-center lg:w-[26rem] max-md:w-[21rem] max-md:px-16">
+          <div className="px-14 flex flex-col w-auto justify-center lg:w-[29rem] max-md:w-[21rem] max-md:px-16">
             <div className="flex-col justify-center text-[#0E2368] font-bold lg:text-6xl max-md:text-3xl ">
               <div className="max-md:justify-center">
                 Discover the
