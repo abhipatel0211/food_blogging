@@ -6,7 +6,7 @@ const Aboutus = () => {
     <div className="mt-48 h-96">
       <div className="w-full h-full flex bg-[#1e2a5d0e] flex-wrap">
         <div className="flex h-full justify-center lg:w-1/2 max-md:hidden">
-          <img src={aboutus} alt="cooking table" srcset="" />
+          <img src={aboutus} alt="cooking table" />
         </div>
         <div className="lg:w-1/2">
           <div className="flex flex-col p-3 h-full w-full justify-center justify-items-center  max-md:text-center ">

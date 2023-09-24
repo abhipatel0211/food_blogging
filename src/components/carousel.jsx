@@ -52,8 +52,8 @@ const cards = [
 ];
 
 const Card = ({ card }) => (
-  <div className="border flex flex-col max-md:justify-center p-4 rounded-3xl border-[#E5E5E5] w-80 gap-2">
-    <img src={card.image} alt={card.title} srcset="" />
+  <div className="border flex flex-col max-md:justify-center p-4 rounded-3xl border-[#E5E5E5] w-80 gap-3">
+    <img src={card.image} alt={card.title} />
     <div className="flex max-md:justify-center font-semibold text-xl text-[#0E2368]">
       {card.title}
     </div>
@@ -87,7 +87,6 @@ const CardCarousel = () => {
   const goToNext = () => {
     setCurrent((prev) => {
       if (prev + numVisible >= cards.length) {
-        // If the next step goes beyond the data, loop back to the beginning
         return 0;
       } else {
         return prev + numVisible;
@@ -95,14 +94,15 @@ const CardCarousel = () => {
     });
   };
 
-  // Calculate the current page number
   const currentPage = Math.floor(current / numVisible) + 1;
   const totalPages = Math.ceil(cards.length / numVisible);
 
   return (
     <div className="py-10 gap-2 flex-col justify-start">
-      <div>Latest Articles</div>
-      <div className="flex flex-wrap justify-evenly gap-3">
+      <div className="font-semibold flex max-md:justify-center p-10 text-4xl">
+        Latest Articles
+      </div>
+      <div className="flex flex-wrap justify-evenly gap-5">
         {visibleCards.map((card) => (
           <div key={card.id} className="flex-shrink-0">
             <Card card={card} />
