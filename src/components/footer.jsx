@@ -6,8 +6,8 @@ import twitter from "../assests/twitter_logo.svg";
 
 const Footer = () => {
   return (
-    <div className="flex justify-evenly bg-[#1e2a5d0e] text-[#646874] h-fit p-7 flex-shrink-0 flex-wrap">
-      <div className="flex justify-center align-middle">
+    <div className="flex justify-evenly bg-[#1e2a5d0e] text-[#646874] h-fit p-7 flex-shrink-0 flex-wrap max-md:pt-4">
+      <div className="flex justify-center items-center">
         <img src={truck} alt="truck" srcset="" />
       </div>
       <div>
