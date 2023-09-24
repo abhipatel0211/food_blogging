@@ -1,5 +1,5 @@
 import React from "react";
-import pizzaimg from "../assests/pizza.png";
+import pizzaimg from "../assests/pizza_avif.avif";
 import vector from "../assests/Vector 1 red beside pizza.png";
 import truck from "../assests/truck.png";
 import arrow from "../assests/Vector 2 arrow.png";
@@ -15,8 +15,8 @@ const Landingpage = () => {
           loading="lazy"
         />
         <div className="pt-20 max-md:text-center">
-          <div className="px-14 flex flex-col w-auto justify-center lg:w-[26rem] max-md:w-[21rem] max-md:px-16">
-            <div className="flex-col justify-center text-[#0E2368] font-bold lg:text-6xl max-md:text-3xl ">
+          <div className="min-md:pl-14 flex flex-col w-auto justify-center lg:w-[26rem] max-md:w-[21rem] max-md:px-16">
+            <div className="flex-col justify-center text-[#0E2368] font-bold lg:text-6xl max-md:text-3xl  ">
               <div className="max-md:justify-center">
                 Discover the
                 <span className="text-[#E23744]"> Best</span> Food and Drinks

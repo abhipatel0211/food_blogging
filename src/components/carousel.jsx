@@ -53,13 +53,13 @@ const cards = [
 
 const Card = ({ card }) => (
   <div className="border flex flex-col max-md:justify-center p-4 rounded-3xl border-[#E5E5E5] w-80 gap-3">
-    <img src={card.image} alt={card.title} />
+    <img src={card.image} alt={card.title} loading="lazy" />
     <div className="flex max-md:justify-center font-semibold text-xl text-[#0E2368]">
       {card.title}
     </div>
     <p className="flex max-md:text-center text-[#444957]">{card.text}</p>
     <div className="flex max-md:justify-center">
-      <a href={card.link} target="_black">
+      <a href={card.link} target="_blank" rel="noopener noreferrer">
         <button className="text-[#0E2368] p-2 rounded-3xl w-fit border  font-semibold border-[#0E2368]">
           Read More
         </button>
@@ -75,23 +75,15 @@ const CardCarousel = () => {
   const visibleCards = cards.slice(current, current + numVisible);
 
   const goToPrev = () => {
-    setCurrent((prev) => {
-      if (prev === 0) {
-        return cards.length - numVisible;
-      } else {
-        return prev - numVisible;
-      }
-    });
+    setCurrent((prev) =>
+      prev === 0 ? cards.length - numVisible : prev - numVisible
+    );
   };
 
   const goToNext = () => {
-    setCurrent((prev) => {
-      if (prev + numVisible >= cards.length) {
-        return 0;
-      } else {
-        return prev + numVisible;
-      }
-    });
+    setCurrent((prev) =>
+      prev + numVisible >= cards.length ? 0 : prev + numVisible
+    );
   };
 
   const currentPage = Math.floor(current / numVisible) + 1;
@@ -99,10 +91,10 @@ const CardCarousel = () => {
 
   return (
     <div className="py-10 gap-2 flex-col justify-start">
-      <div className="font-semibold flex max-md:justify-center p-10 text-4xl">
+      <div className="font-semibold text-[#0E2368] flex p-10 text-4xl lg:w-1/2 justify-center">
         Latest Articles
       </div>
-      <div className="flex flex-wrap justify-evenly gap-5">
+      <div className="flex flex-wrap justify-center gap-5">
         {visibleCards.map((card) => (
           <div key={card.id} className="flex-shrink-0">
             <Card card={card} />
@@ -111,7 +103,7 @@ const CardCarousel = () => {
       </div>
       <div className="m-3">
         <div className="flex justify-center items-center gap-3">
-          <button onClick={goToPrev} className="border border-black h-7 ">
+          <button onClick={goToPrev} className="border border-black h-7">
             {"<"}
           </button>
           <div className="text-center text-gray-500 items-center">
