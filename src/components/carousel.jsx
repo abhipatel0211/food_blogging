@@ -51,6 +51,7 @@ const cards = [
   },
 ];
 
+// Card component to display individual cards
 const Card = ({ card }) => (
   <div className="border flex flex-col max-md:justify-center p-4 rounded-3xl border-[#E5E5E5] w-80 gap-3">
     <img src={card.image} alt={card.title} loading="lazy" />
@@ -68,6 +69,7 @@ const Card = ({ card }) => (
   </div>
 );
 
+// CardCarousel component to display a carousel of cards
 const CardCarousel = () => {
   const [current, setCurrent] = useState(0);
   const numVisible = 3;

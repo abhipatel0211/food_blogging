@@ -4,12 +4,15 @@ import fb from "../assests/facebook.png";
 import insta from "../assests/insta.png";
 import twitter from "../assests/twitter_logo.svg";
 
+// Footer component
 const Footer = () => {
   return (
     <div className="flex justify-evenly bg-[#1e2a5d0e] text-[#646874] h-fit p-7 max-md:flex-col flex-shrink-0 flex-wrap max-md:pt-4 max-md:gap-8">
+      {/* Truck Image */}
       <div className="flex justify-center items-center">
         <img src={truck} alt="truck" loading="lazy" />
       </div>
+      {/* Contact Information */}
       <div className="flex flex-col gap-3">
         <div className="flex font-semibold text-[#0E2368] text-lg ">
           Contact Us
@@ -22,6 +25,7 @@ const Footer = () => {
         <p>(904) 443-0343</p>
       </div>
       <div className="flex flex-col gap-3">
+        {/* More Links */}
         <div className="flex font-semibold text-[#0E2368] text-lg ">More</div>
         <div className="flex flex-col gap-3">
           <p>About us</p>
@@ -30,6 +34,7 @@ const Footer = () => {
           <p>Contact Us</p>
         </div>
       </div>
+      {/* Social Links */}
       <div className="max-md:flex  max-md:text-center max-md:flex-col-reverse gap-3">
         <div className="flex font-semibold text-[#0E2368] text-lg max-md:hidden justify-start">
           Social Links
@@ -50,6 +55,7 @@ const Footer = () => {
             <img src={fb} alt="Facebook logo" loading="lazy" />
           </div>
         </div>
+        {/* Copyright */}
         <div className="mt-16 p-0">© 2022 Food Truck Example</div>
       </div>
     </div>
